@@ -1,9 +1,11 @@
 const buttPress = document.querySelector('.button-on');
 const buttonAttach = document.querySelector('.but');
 const numberAttach = document.querySelector('.boxNumber');
+const resetallon = document.querySelector('.resetallon');
 
 
 buttPress.addEventListener("click", makeBox );
+// resetallon.addEventListener('click', resetAllOnAndClearScreen);
 
 function reset(){
     var resetButton = document.querySelector(".boxNumber");
