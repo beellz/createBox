@@ -5,24 +5,49 @@ const numberAttach = document.querySelector('.boxNumber');
 
 buttPress.addEventListener("click", makeBox );
 
+function reset(){
+    var resetButton = document.querySelector(".boxNumber");
+    if(resetButton){
+        resetButton.value= "";
+   }
+}
+
+
 function makeBox () {
     numberToSelect = numberAttach.value;
-    console.log(numberToSelect);
+    
+    let i ;
+    for ( i=0 ; i < numberToSelect ; i++){
+        (makeelement());
+    };
+
+    function makeelement () {    
+
     const div = document.createElement("div");
     const buttonCreate = document.createElement("button");
     buttonCreate.classList = "buttonMade";
     
     
-    // var press = document.querySelector('.buttonMade');
-    // press.addEventListener('click', () => { console.log('clicked me like hell')});
-   
+     
+     
 
-
-    buttonCreate.textContent = "helloNewHere"
+    buttonCreate.textContent = "hello New Here"
 
     div.appendChild(buttonCreate);
 
     buttonAttach.appendChild(div);
+    
+    }
+    var press = document.querySelector('.buttonMade');
+    if (press){
+        press.addEventListener('click', () => {console.log("click")});
+    }
 
+    reset();
 
+   
+    
 };
+    
+   
+
